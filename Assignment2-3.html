@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<h1>Assignment2-3</h1>
+Create an object type person which consists of first name, last name, email and phone properties. Using
+JavaScript append these properties to appropriate place in an html document<br /><br />    <input type="text" id="firstName" /><br /><br />
+    <input type="text" id="lastName" /><br /><br />
+    <input type="text" id="email" /><br /><br />
+    <input type="text" id="phone" /><br /><br />
+    <script type="text/javascript">
+        var myObject =  {
+            firstName: "karthik",
+            lastName: "kumar",
+            email: "nkkarthik84@gmail.com",
+            phone:"7022173051"
+        };
+        document.getElementById("firstName").value = myObject.firstName;
+        document.getElementById("lastName").value = myObject.lastName;
+        document.getElementById("email").value = myObject.email;
+        document.getElementById("phone").value = myObject.phone;
+    </script>
+</body>
+</html>

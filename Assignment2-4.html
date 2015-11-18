@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Assignment2-4</h1>
+    Create a simple nested function in which inner function is not accessible outside the outer function. Just
+alert the values from the function.<br /><br />
+
+    <script type="text/javascript">
+
+        var myFunction = function (value) {
+            var innerFunction = function () {
+                alert(value);
+            }
+            innerFunction();
+        }
+        myFunction("Hello there!");
+    </script>
+
+
+
+</body>
+</html>

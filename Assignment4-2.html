@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Assignment 4-2</h1>
+     Create two constructor functions person and student. Create a property of person. Inherit the
+     property of the function person into student. Then change the property in student function
+
+    <script type="text/javascript">
+
+        function Person() {
+            this.name;
+        };
+        function Student() {
+            this.id;
+        };
+
+        var person = new Person();
+        var student1 = new Student();
+        student1.__proto__ = person;
+        student1.name = "karthik";
+        student1.id = "1234";
+        alert(student1.name + " " + student1.id);
+    </script>
+
+</body>
+</html>

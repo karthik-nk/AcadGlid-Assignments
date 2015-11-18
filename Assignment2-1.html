@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Assigment2-1</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body>
+    <h1>Assignment2-1: You need make a dual list with Closures</h1>
+    <select id='availableItems' size="20" multiple="true" name="availableItems">    
+    </select>
+    <input type="button" id="sendAll" value=">>" />
+    <input type="button" id="send" value=">" />
+    <input type="button" id="revert" value="<" />
+    <input type="button" id="revertAll" value="<<" />
+    <select id='selectedItems' size='20' multiple="true" name="selectedItems">
+    </select>
+
+    <script type="text/javascript">
+        var availableEmployees = ["employee1", "employee2", "employee3", "employee4", "employee5", "employee6", "employee7", "employee8", "employee9", "employee10", "employee11", "employee12", "employee13", "employee14", "employee15"];
+        var selectedEmployees = [];
+        for (var items in availableEmployees) {
+            document.getElementById("availableItems").options[items] = new Option(availableEmployees[items]);       
+        }
+
+        document.getElementById("sendAll").onclick = (function () {        
+            var innerFunction = function () {
+                var items = $('#availableItems option');
+                $("#availableItems option:selected").remove();
+                $('#selectedItems').append(items);
+            }
+        return innerFunction;
+        })();
+
+        document.getElementById("revertAll").onclick = (function () {
+            var innerFunction = function () {
+                var items = $('#selectedItems option');
+                $("#selectedItems option:selected").remove();
+                $('#availableItems').append(items);
+            }
+            return innerFunction;
+        })();
+
+        document.getElementById("send").onclick = (function () {
+            var innerFunction = function () {
+                var selected = $('#availableItems option:selected');
+                $("#availableItems option:selected").remove();
+                $('#selectedItems').append(selected);
+            }
+            return innerFunction;
+        })();
+
+        document.getElementById("revert").onclick = (function () {
+            var innerFunction = function () {
+                var selected = $('#selectedItems option:selected');
+                $("#selectedItems option:selected").remove();
+                $('#availableItems').append(selected);
+            }
+            return innerFunction;
+        })();
+</script>
+
+</body>
+</html>

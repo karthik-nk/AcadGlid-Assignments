@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Assignment3-1</h1>
+    Create an object type using car using constructor function. It consists of make, model and year properties. Now, create two objects of car and alert their properties.
+    <script type="text/javascript">
+
+        function car(make, model, year ) {
+            this.Make = make;
+            this.Model = model;
+            this.Year = year;
+        }
+        var car1 = new car('Ford', 'CMAX', '2014');
+        var car2 = new car('Lexus', 'IS250', '2008');
+        alert(car1.Make+ car1.Model+ car1.Year);
+        alert(car2.Make+ car2.Model+ car2.Year);
+    </script>
+</body>
+</html>
